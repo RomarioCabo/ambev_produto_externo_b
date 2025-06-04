@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: produto_externo_b
+
+logging:
+  level:
+    org:
+      springframework:
+        cache: TRACE
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"
+    enabled: true
+    operations-sorter: "method"
+  packagesToScan: com.br.produto_externo_b.controller
+
+server:
+  tomcat:
+    max-http-form-post-size: 100MB
+  port: 8092
+  shutdown: graceful
