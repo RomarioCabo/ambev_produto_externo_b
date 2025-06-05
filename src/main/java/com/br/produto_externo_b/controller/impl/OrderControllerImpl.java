@@ -18,6 +18,7 @@ public class OrderControllerImpl implements OrderController {
 
     @Override
     public ResponseEntity<Void> receiveOrder(OrderRequest request) {
+        log.info("Receive order request: {}", request);
         return ResponseEntity.ok().build();
     }
 }
